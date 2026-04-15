@@ -48,10 +48,11 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .lang-buttons button:hover {
-      opacity: 0.9;
+      background: #dcecff;
     }
 
     .container {
@@ -140,9 +141,8 @@
       <h2 id="about-title">自我介紹</h2>
       <p id="about-text">
         大家好，我是蘇靖哲，目前就讀亞洲大學，大一經營管理A班。
-        這個網站是我利用 GitHub Pages 架設的個人網站，主要用來介紹自己的基本資料、
-        興趣，以及未來的學習方向。透過這次架站練習，我更了解網站架設的基本流程，
-        也學到如何將網頁成功發布到網路上。
+        這個網站是我利用 GitHub Pages 架設的個人網站，主要用來介紹自己的基本資料、興趣，以及未來的學習方向。
+        透過這次架站練習，我更了解網站架設的基本流程，也學到如何將網頁成功發布到網路上。
       </p>
     </section>
 
@@ -181,7 +181,7 @@
     <section class="card">
       <h2 id="contact-title">聯絡資訊</h2>
       <div class="contact">
-        <p id="email-text"><strong>Email：</strong>example@email.com</p>
+        <p id="email-text"><strong>Email：</strong>student@email.com</p>
         <p id="github-text"><strong>GitHub：</strong>QAQ235711</p>
       </div>
     </section>
@@ -189,24 +189,24 @@
   </div>
 
   <footer id="footer-text">
-    © 2026 我的個人網站 | 使用 GitHub Pages 製作
+    © 2026 蘇靖哲的個人網站 | 使用 GitHub Pages 製作
   </footer>
 
   <script>
     function setLanguage(lang) {
       if (lang === 'en') {
         document.documentElement.lang = 'en';
-        document.getElementById('main-title').innerText = 'Welcome to My Personal Website';
+        document.getElementById('main-title').innerText = "Welcome to Su Jing-Zhe's Personal Website";
         document.getElementById('sub-title').innerText = 'Personal Profile and Learning Portfolio';
 
         document.getElementById('about-title').innerText = 'About Me';
         document.getElementById('about-text').innerText =
-          'Hello, my name is Su Jing-Zhe. I am currently studying at Asia University. This website is my personal site created with GitHub Pages. It introduces my basic information, interests, and future learning goals. Through this website-building practice, I learned the basic process of web publishing and gained a better understanding of website creation.';
+          'Hello, my name is Su Jing-Zhe. I am currently studying at Asia University in First-Year Business Management Class A. This website is my personal site created with GitHub Pages. It introduces my basic information, interests, and future learning goals. Through this website-building practice, I learned the basic process of web publishing and gained a better understanding of website creation.';
 
         document.getElementById('profile-title').innerText = 'Profile';
         document.getElementById('name-text').innerHTML = '<strong>Name:</strong> Su Jing-Zhe';
         document.getElementById('school-text').innerHTML = '<strong>School:</strong> Asia University';
-        document.getElementById('dept-text').innerHTML = '<strong>Department/Class:</strong> Fashion Business Management A';
+        document.getElementById('dept-text').innerHTML = '<strong>Class:</strong> First-Year Business Management A';
         document.getElementById('use-text').innerHTML = '<strong>Purpose:</strong> Information and Technology Course Assignment';
 
         document.getElementById('interest-title').innerText = 'Interests and Skills';
@@ -223,14 +223,14 @@
           'I hope to learn more about information technology through this course, such as website building, web design, and basic programming concepts. In the future, I also hope to apply these skills to my studies and work to improve my digital abilities.';
 
         document.getElementById('contact-title').innerText = 'Contact Information';
-        document.getElementById('email-text').innerHTML = '<strong>Email:</strong> example@email.com';
+        document.getElementById('email-text').innerHTML = '<strong>Email:</strong> student@email.com';
         document.getElementById('github-text').innerHTML = '<strong>GitHub:</strong> QAQ235711';
 
         document.getElementById('footer-text').innerText =
-          '© 2026 My Personal Website | Built with GitHub Pages';
+          "© 2026 Su Jing-Zhe's Personal Website | Built with GitHub Pages";
       } else {
         document.documentElement.lang = 'zh-Hant';
-        document.getElementById('main-title').innerText = '歡迎來到我的個人網站';
+        document.getElementById('main-title').innerText = '歡迎來到蘇靖哲的個人網站';
         document.getElementById('sub-title').innerText = '個人簡介與學習成果展示';
 
         document.getElementById('about-title').innerText = '自我介紹';
@@ -240,7 +240,7 @@
         document.getElementById('profile-title').innerText = '個人資料';
         document.getElementById('name-text').innerHTML = '<strong>姓名：</strong>蘇靖哲';
         document.getElementById('school-text').innerHTML = '<strong>學校：</strong>亞洲大學';
-        document.getElementById('dept-text').innerHTML = '<strong>系級：</strong>大衣經營管理A班';
+        document.getElementById('dept-text').innerHTML = '<strong>系級：</strong>大一經營管理A班';
         document.getElementById('use-text').innerHTML = '<strong>網站用途：</strong>資訊與科技課程作業展示';
 
         document.getElementById('interest-title').innerText = '興趣與專長';
@@ -257,11 +257,11 @@
           '我希望透過這門課學會更多資訊科技相關知識，例如網站架設、網頁設計與基本程式概念。未來也希望能將這些能力實際運用在學習與工作上，提升自己的數位能力。';
 
         document.getElementById('contact-title').innerText = '聯絡資訊';
-        document.getElementById('email-text').innerHTML = '<strong>Email：</strong>example@email.com';
+        document.getElementById('email-text').innerHTML = '<strong>Email：</strong>student@email.com';
         document.getElementById('github-text').innerHTML = '<strong>GitHub：</strong>QAQ235711';
 
         document.getElementById('footer-text').innerText =
-          '© 2026 我的個人網站 | 使用 GitHub Pages 製作';
+          '© 2026 蘇靖哲的個人網站 | 使用 GitHub Pages 製作';
       }
     }
   </script>
