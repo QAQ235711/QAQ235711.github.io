@@ -4,13 +4,267 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的個人網站</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(to bottom, #f4f8fb, #e8f0f7);
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(to right, #4a90e2, #6fb1fc);
+      color: white;
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .lang-buttons {
+      margin-top: 20px;
+    }
+
+    .lang-buttons button {
+      border: none;
+      background: white;
+      color: #4a90e2;
+      padding: 10px 18px;
+      margin: 0 6px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .lang-buttons button:hover {
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-top: 0;
+      border-left: 6px solid #4a90e2;
+      padding-left: 10px;
+      font-size: 24px;
+    }
+
+    .profile-list p,
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      background: #eaf4ff;
+      color: #2c5d8f;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .goal-box {
+      background: #f7fbff;
+      border-left: 5px solid #6fb1fc;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #dfeaf5;
+      color: #555;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>歡迎來到我的個人網站</h1>
-  <p>姓名：蘇靖哲</p>
-  <p>學校：亞洲大學</p>
-  <p>系級：大衣經營管理A班</p>
-  <p>這是我用 GitHub Pages 架設的個人網站。</p>
-  <p>興趣：聽音樂、看電影、旅遊。</p>
+
+  <header>
+    <h1 id="main-title">歡迎來到我的個人網站</h1>
+    <p id="sub-title">個人簡介與學習成果展示</p>
+
+    <div class="lang-buttons">
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section class="card">
+      <h2 id="about-title">自我介紹</h2>
+      <p id="about-text">
+        大家好，我是蘇靖哲，目前就讀亞洲大學，大衣經營管理A班。
+        這個網站是我利用 GitHub Pages 架設的個人網站，主要用來介紹自己的基本資料、
+        興趣，以及未來的學習方向。透過這次架站練習，我更了解網站架設的基本流程，
+        也學到如何將網頁成功發布到網路上。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 id="profile-title">個人資料</h2>
+      <div class="profile-list">
+        <p id="name-text"><strong>姓名：</strong>蘇靖哲</p>
+        <p id="school-text"><strong>學校：</strong>亞洲大學</p>
+        <p id="dept-text"><strong>系級：</strong>大衣經營管理A班</p>
+        <p id="use-text"><strong>網站用途：</strong>資訊與科技課程作業展示</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="interest-title">興趣與專長</h2>
+      <p id="interest-text">
+        我平時的興趣包括聽音樂、看電影與旅遊，這些活動可以讓我放鬆心情，也能開拓視野。
+      </p>
+      <div class="skills">
+        <span class="tag" id="tag1">聽音樂</span>
+        <span class="tag" id="tag2">看電影</span>
+        <span class="tag" id="tag3">旅遊</span>
+        <span class="tag" id="tag4">網路學習</span>
+        <span class="tag" id="tag5">基礎電腦操作</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="goal-title">學習目標</h2>
+      <div class="goal-box" id="goal-text">
+        我希望透過這門課學會更多資訊科技相關知識，例如網站架設、網頁設計與基本程式概念。
+        未來也希望能將這些能力實際運用在學習與工作上，提升自己的數位能力。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="contact-title">聯絡資訊</h2>
+      <div class="contact">
+        <p id="email-text"><strong>Email：</strong>example@email.com</p>
+        <p id="github-text"><strong>GitHub：</strong>QAQ235711</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer id="footer-text">
+    © 2026 我的個人網站 | 使用 GitHub Pages 製作
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'en') {
+        document.documentElement.lang = 'en';
+        document.getElementById('main-title').innerText = 'Welcome to My Personal Website';
+        document.getElementById('sub-title').innerText = 'Personal Profile and Learning Portfolio';
+
+        document.getElementById('about-title').innerText = 'About Me';
+        document.getElementById('about-text').innerText =
+          'Hello, my name is Su Jing-Zhe. I am currently studying at Asia University. This website is my personal site created with GitHub Pages. It introduces my basic information, interests, and future learning goals. Through this website-building practice, I learned the basic process of web publishing and gained a better understanding of website creation.';
+
+        document.getElementById('profile-title').innerText = 'Profile';
+        document.getElementById('name-text').innerHTML = '<strong>Name:</strong> Su Jing-Zhe';
+        document.getElementById('school-text').innerHTML = '<strong>School:</strong> Asia University';
+        document.getElementById('dept-text').innerHTML = '<strong>Department/Class:</strong> Fashion Business Management A';
+        document.getElementById('use-text').innerHTML = '<strong>Purpose:</strong> Information and Technology Course Assignment';
+
+        document.getElementById('interest-title').innerText = 'Interests and Skills';
+        document.getElementById('interest-text').innerText =
+          'My interests include listening to music, watching movies, and traveling. These activities help me relax and broaden my horizons.';
+        document.getElementById('tag1').innerText = 'Music';
+        document.getElementById('tag2').innerText = 'Movies';
+        document.getElementById('tag3').innerText = 'Travel';
+        document.getElementById('tag4').innerText = 'Online Learning';
+        document.getElementById('tag5').innerText = 'Basic Computer Skills';
+
+        document.getElementById('goal-title').innerText = 'Learning Goals';
+        document.getElementById('goal-text').innerText =
+          'I hope to learn more about information technology through this course, such as website building, web design, and basic programming concepts. In the future, I also hope to apply these skills to my studies and work to improve my digital abilities.';
+
+        document.getElementById('contact-title').innerText = 'Contact Information';
+        document.getElementById('email-text').innerHTML = '<strong>Email:</strong> example@email.com';
+        document.getElementById('github-text').innerHTML = '<strong>GitHub:</strong> QAQ235711';
+
+        document.getElementById('footer-text').innerText =
+          '© 2026 My Personal Website | Built with GitHub Pages';
+      } else {
+        document.documentElement.lang = 'zh-Hant';
+        document.getElementById('main-title').innerText = '歡迎來到我的個人網站';
+        document.getElementById('sub-title').innerText = '個人簡介與學習成果展示';
+
+        document.getElementById('about-title').innerText = '自我介紹';
+        document.getElementById('about-text').innerText =
+          '大家好，我是蘇靖哲，目前就讀亞洲大學，大衣經營管理A班。這個網站是我利用 GitHub Pages 架設的個人網站，主要用來介紹自己的基本資料、興趣，以及未來的學習方向。透過這次架站練習，我更了解網站架設的基本流程，也學到如何將網頁成功發布到網路上。';
+
+        document.getElementById('profile-title').innerText = '個人資料';
+        document.getElementById('name-text').innerHTML = '<strong>姓名：</strong>蘇靖哲';
+        document.getElementById('school-text').innerHTML = '<strong>學校：</strong>亞洲大學';
+        document.getElementById('dept-text').innerHTML = '<strong>系級：</strong>大衣經營管理A班';
+        document.getElementById('use-text').innerHTML = '<strong>網站用途：</strong>資訊與科技課程作業展示';
+
+        document.getElementById('interest-title').innerText = '興趣與專長';
+        document.getElementById('interest-text').innerText =
+          '我平時的興趣包括聽音樂、看電影與旅遊，這些活動可以讓我放鬆心情，也能開拓視野。';
+        document.getElementById('tag1').innerText = '聽音樂';
+        document.getElementById('tag2').innerText = '看電影';
+        document.getElementById('tag3').innerText = '旅遊';
+        document.getElementById('tag4').innerText = '網路學習';
+        document.getElementById('tag5').innerText = '基礎電腦操作';
+
+        document.getElementById('goal-title').innerText = '學習目標';
+        document.getElementById('goal-text').innerText =
+          '我希望透過這門課學會更多資訊科技相關知識，例如網站架設、網頁設計與基本程式概念。未來也希望能將這些能力實際運用在學習與工作上，提升自己的數位能力。';
+
+        document.getElementById('contact-title').innerText = '聯絡資訊';
+        document.getElementById('email-text').innerHTML = '<strong>Email：</strong>example@email.com';
+        document.getElementById('github-text').innerHTML = '<strong>GitHub：</strong>QAQ235711';
+
+        document.getElementById('footer-text').innerText =
+          '© 2026 我的個人網站 | 使用 GitHub Pages 製作';
+      }
+    }
+  </script>
+
 </body>
 </html>
